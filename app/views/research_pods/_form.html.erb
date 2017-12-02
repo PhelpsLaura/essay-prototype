@@ -1,0 +1,8 @@
+<p><%= form_for ([@essay, @research_pod]) do |f| %></p>
+
+  <p><%= f.label :body %></p>
+  <p><%= f.text_area :body %></p>
+
+  <%= f.submit :class => "btn waves-effect blue lighten-2"%>
+
+<%end%>

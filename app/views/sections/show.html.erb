@@ -1,0 +1,17 @@
+<h1><%= @essay.title %>.</h1>
+<h3 style="font-family: Fredericka the Great" class="lime-text text-darken-1">
+  <%= @section.title %>
+</h3>
+
+<div class="sec_outline">
+  <p><%= markdown(@section.outline) %></p>
+</div>
+
+<div class="sec_content">
+  <%= markdown(@section.content)%>
+</div>
+
+<%= link_to "EDIT", edit_essay_section_path(@essay, @section), :class => "btn lime"%>
+<%= link_to "BACK", essay_path(@essay), :class => "btn lime"%>
+
+<!-- TODO: add fucking sources what is wrong with you!!!! -->

@@ -1,0 +1,14 @@
+<h1 class="center"><%= @source.title %></h1>
+<p class="center"><i><%= @source.description %></i></p>
+
+</br></br>
+<h5>Notes: </h5>
+<p><%= markdown(@source.readings) %></p>
+
+</br></br>
+<p><%= markdown(@source.citation) %></p>
+<p><%= link_to "More at...", @source.link %></p>
+
+</br></br>
+<p><%= link_to "Edit", edit_essay_source_path(@essay, @source), :class => "btn orange lighten-2"%>
+<%= link_to "Back", essay_path(@essay), :class => "btn orange lighten-2" %></p>

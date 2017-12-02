@@ -1,0 +1,32 @@
+<h1 class="center"><%= @essay.title %></h1>
+<p class="center">Due: <%= @essay.due_date.strftime("%B %d, %Y") %></p>
+
+
+<% if @essay.research_pods.any? %>
+  <div class="row">
+    <% @i = 1 %>
+    <%= render @essay.research_pods %>
+  </div>
+<% end %>
+
+<% if @essay.sections.any? %>
+  <div class="section-outline">
+    <ul class="collapsible" data-collapsible="accordion">
+      <li>
+        <div class="collapsible-header">
+          <h4>Working Outline</h4>
+        </div>
+      </li>
+      <%= render @essay.sections %>
+    </ul>
+  </div>
+<% end %>
+
+<% if @essay.sources.any? %>
+  <div class="collection with-header">
+    <h5 class="collection-header">Works Cited and Readings</h5>
+    <%= render @essay.sources %>
+  </div>
+
+<%end%>
+<%= render "fixed_action_menu" %>
