@@ -1,6 +1,14 @@
 <h1 class="center"><%= @essay.title %></h1>
 <p class="center">Due: <%= @essay.due_date.strftime("%B %d, %Y") %></p>
 
+<% unless @essay.question.blank? %>
+
+      <div class = "card horizontal">
+        <div class ="card-content"><%= markdown(@essay.question) %></div>
+      </div>
+
+<%end%>
+
 
 <% if @essay.research_pods.any? %>
   <div class="row">

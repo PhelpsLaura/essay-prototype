@@ -1,5 +1,7 @@
 <!-- Roundup of TODO's to add potentially over time: -->
 
+<!-- TODO: Fix delete alerts -->
+
 <!-- TODO: place that tells you how many days you have till it's due, how many weeks, etc? -->
 
 <!--TODO: Place for Thesis / Driving Question? -->
@@ -39,8 +41,9 @@
               <i class="material-icons right">close</i>
             </h3>
             <p class="text-purple lighten-3">Due: <%= essay.due_date %></p>
-            <p>Section will contain more content in future; options include: preiview of content,
-            summary of intent, outline, etc, etc.</p>
+            <%unless essay.question.blank? %>
+              <h5><%= essay.question %> </h5>
+            <%end%>
             <span class="teal-text lighten-1">
               <%= link_to "More", essay_path(essay),
                   :class => "teal-text lighten-1" %>

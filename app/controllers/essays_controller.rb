@@ -43,6 +43,6 @@ class EssaysController < ApplicationController
 
   private
     def essay_params
-      params.require(:essay).permit(:title, :due_date)
+      params.require(:essay).permit(:title, :due_date, :question)
     end
 end
