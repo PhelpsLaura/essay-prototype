@@ -1,10 +1,31 @@
 <h1 class="center"><%= @essay.title %></h1>
 <p class="center">Due: <%= @essay.due_date.strftime("%B %d, %Y") %></p>
 
+
+<% unless @essay.prompt.blank? %>
+  <div class="center-align">
+    <a class="waves-effect waves-purple btn-flat modal-trigger" href="#prompt-modal">Prompt</a>
+  </div>
+
+  <div id="prompt-modal" class="modal">
+    <div class="modal-content">
+      <h4>Prompt</h4>
+      <p><%= markdown(@essay.prompt) %></p>
+    </div>
+    <div class="modal-footer">
+      <%= link_to "Edit", edit_essay_path(@essay), :class => "waves-effect waves-light btn purple lighten-3"%>
+      <a class="waves-effect waves-light btn purple lighten-3 modal-trigger" href="">Close</a>
+    </div>
+  </div>
+<%end%>
+
 <% unless @essay.question.blank? %>
 
       <div class = "card horizontal">
-        <div class ="card-content"><%= markdown(@essay.question) %></div>
+        <div class ="card-content">
+          <span class = "card-title">Thesis / Driving Question:</span>
+          <%= markdown(@essay.question) %>
+        </div>
       </div>
 
 <%end%>
@@ -38,3 +59,7 @@
 
 <%end%>
 <%= render "fixed_action_menu" %>
+
+<script>
+  $('.modal').modal();
+</script>
