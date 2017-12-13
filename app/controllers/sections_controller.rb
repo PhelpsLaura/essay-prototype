@@ -13,7 +13,7 @@ class SectionsController < ApplicationController
       @essay = Essay.find(params[:essay_id])
       @section = @essay.sections.new(section_params)
       if @section.save
-        redirect_to essay_path(@essay)
+        redirect_to essay_section_path(@essay, @section)
       else
         render 'new'
       end
@@ -28,7 +28,7 @@ class SectionsController < ApplicationController
       @essay = Essay.find(params[:essay_id])
       @section = @essay.sections.find(params[:id])
       if @section.update(section_params)
-        redirect_to essay_path(@essay)
+        redirect_to essay_section_path(@essay, @section)
       else
         render 'edit'
       end

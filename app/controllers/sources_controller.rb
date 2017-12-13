@@ -1,5 +1,5 @@
 class SourcesController < ApplicationController
-  
+
   def show
     @essay = Essay.find(params[:essay_id])
     @source = @essay.sources.find(params[:id])
@@ -14,7 +14,7 @@ class SourcesController < ApplicationController
     @essay = Essay.find(params[:essay_id])
     @source = @essay.sources.new(source_params)
     if @source.save
-      redirect_to essay_path(@essay)
+      redirect_to essay_source_path(@essay, @source)
     else
       render 'new'
     end
@@ -29,7 +29,7 @@ class SourcesController < ApplicationController
     @essay = Essay.find(params[:essay_id])
     @source = @essay.sources.find(params[:id])
     if @source.update(source_params)
-      redirect_to essay_path(@essay)
+      redirect_to essay_source_path(@essay, @source)
     else
       render 'edit'
     end
