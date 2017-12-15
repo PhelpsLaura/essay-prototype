@@ -44,6 +44,6 @@ class ResearchPodsController < ApplicationController
 
   private
     def research_pod_params
-      params.require(:research_pod).permit(:body)
+      params.require(:research_pod).permit(:body, :title)
     end
 end

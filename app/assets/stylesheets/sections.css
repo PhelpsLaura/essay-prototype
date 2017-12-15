@@ -2,7 +2,13 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/*/
 
-.blue_box{
-  background-color: blue;
-  width: 500px;
+.sec_outline{
+  margin: 0 5%;
+  padding: 1% 1% 1% 5%;
+  border-left: 6px double #1b5e20;
+  background-color: #f1f8e9;
+}
+
+.clearfix{
+  padding: 10px;
 }

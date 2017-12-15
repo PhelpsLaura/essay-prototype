@@ -1,6 +1,6 @@
-<h1><%= @essay.title %>.</h1>
+<h1 class="center"><%= @essay.title %></h1>
 
-<h3 style="font-family: Fredericka the Great" class="lime-text text-darken-1">
+<h3 class="center">
   <%= @section.title %>
 </h3>
 
@@ -10,6 +10,9 @@
 
 <div class="sec_content">
   <%= markdown(@section.content)%>
+</div>
+
+<div class="clearfix">
 </div>
 
 <%= link_to "EDIT", edit_essay_section_path(@essay, @section), :class => "btn lime"%>

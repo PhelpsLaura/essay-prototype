@@ -17,4 +17,4 @@ This is a web app I've written for myself to have an alternative space to plan a
 
 ##### More
 
-(If you want to see the *(very far from complete)* attempt that a friend and I made during a 12-hour hackathon to rebuild this idea from the ground up in a way that makes sense for a wider audience, check out [this repository](https://github.com/PhelpsLaura/essayOrganizer).)
+(If you want to see the *very far from complete* attempt that a friend and I made during a 12-hour hackathon to rebuild this idea from the ground up in a way that makes sense for a wider audience, check out [this repository](https://github.com/PhelpsLaura/essayOrganizer).)

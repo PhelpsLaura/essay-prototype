@@ -4,10 +4,14 @@
   </div>
 
   <div class="collapsible-body">
-    <span><%= markdown(section.outline) %>
-    <span class="right">
-      <%= link_to "MORE", essay_section_path(@essay, section), :class => "lime-text text-darken-1"%> ||
-      <%= link_to "EDIT", edit_essay_section_path(@essay, section), :class => "lime-text text-darken-1"%>
-    </span></span>
+    <%= markdown(section.outline) %>
+    <span class="secondary-content">
+      <%= link_to essay_section_path(@essay, section), :class => "lime-text text-darken-1", :title => "MORE" do %>
+        <i class="material-icons">flight_takeoff</i>
+      <%end%>
+      <%= link_to edit_essay_section_path(@essay, section), :class => "lime-text text-darken-1", :title => "EDIT" do %>
+        <i class="material-icons">edit</i>
+      <%end%>
+    </span>
   </div>
 </li>
