@@ -36,8 +36,9 @@ class SourcesController < ApplicationController
   end
 
   def destroy
-    @essay = Essay.find(params[:id])
+    @essay = Essay.find(params[:essay_id])
     @source = @essay.sources.find(params[:id])
+    @source.destroy
 
     redirect_to essay_path(@essay)
   end

@@ -35,8 +35,9 @@ class SectionsController < ApplicationController
     end
 
     def destroy
-      @essay = Essay.find(params[:id])
+      @essay = Essay.find(params[:essay_id])
       @section = @essay.sections.find(params[:id])
+      @section.destroy
 
       redirect_to essay_path(@essay)
     end

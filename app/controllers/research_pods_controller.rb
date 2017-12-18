@@ -36,8 +36,9 @@ class ResearchPodsController < ApplicationController
   end
 
   def destroy
-    @essay = Essay.find(params[:id])
+    @essay = Essay.find(params[:essay_id])
     @research_pod = @essay.research_pods.find(params[:id])
+    @research_pod.destroy
 
     redirect_to essay_path(@essay)
   end
