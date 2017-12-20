@@ -1,3 +1,5 @@
+<% @title= @essay.title %>
+
 <h1 class="center"><%= @essay.title %></h1>
 <p class="center">Due: <%= @essay.due_date.strftime("%B %d, %Y") %></p>
 
@@ -52,7 +54,9 @@
 
 <% if @essay.sources.any? %>
   <div class="collection with-header">
-    <h5 class="collection-header">Works Cited and Readings</h5>
+    <h5 class="collection-header">
+      <%= link_to "Works Cited and Readings", essay_sources_path(@essay), :class => "black-text" %>
+    </h5>
     <%= render @essay.sources %>
   </div>
 

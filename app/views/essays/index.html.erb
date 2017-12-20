@@ -1,23 +1,28 @@
 <!-- TODO roundup: -->
 
+<!-- TODO: favicon -->
+
 <!-- TODO: Better format source-->
+
+<!-- TODO: place for editing of just the content that keeps display of outline? -->
 
 <!-- TODO: place that tells you how many days you have till it's due, how many weeks, etc? -->
 
-<!--TODO: over break: migrate to Postgresql?-->
+<!-- TODO: over break: migrate to Postgresql?-->
 
-<!--TODO: System for logging time? -->
+<!-- TODO: System for logging time? -->
 
-<!--TODO: Sources index that acts as works cited? -->
+<!-- TODO: Sources index that acts as works cited? -->
 
-<!--TODO: Toggle research hide show? -->
+<!-- TODO: Toggle research hide show? -->
 
-<!--TODO: Ordering for sections?-->
+<!-- TODO: Ordering for sections?-->
 
-<!--TODO: Independent of Essays, place to put general resources? EX: notes on MLA, structure of a French essay, etc etc.
+<!-- TODO: Independent of Essays, place to put general resources? EX: notes on MLA, structure of a French essay, etc etc.
 ** Expandable Sidebar? -->
 
 <!--TODO: fix carousel to look not fuzzy/not be a hack job???? -->
+<% @title="Essay Planner" %>
 
 <div id="index-wrapper" class="wrapper">
 
@@ -60,11 +65,11 @@
             <%end%>
 
             <%= link_to "More", essay_path(essay),
-                :class => "btn waves-effect purple lighten-3" %>
+                :class => "btn waves-effect purple lighten-3 bottom" %>
 
             <%= link_to "Delete", essay_path(essay), method: :delete,
                 data: {confirm: "Are you sure you want to delete this essay?"},
-                :class => "btn waves-effect purple lighten-3" %>
+                :class => "btn waves-effect purple lighten-3 bottom" %>
           </div>
 
         </div>

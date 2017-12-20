@@ -1,5 +1,10 @@
 class SourcesController < ApplicationController
 
+  def index
+    @essay = Essay.find(params[:essay_id])
+    @sources = @essay.sources.sort_by{|work| work.citation}
+  end
+
   def show
     @essay = Essay.find(params[:essay_id])
     @source = @essay.sources.find(params[:id])
