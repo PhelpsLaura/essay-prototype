@@ -1,0 +1,13 @@
+<% @title = @essay.title %>
+
+<h1><%= @essay.title %></h1>
+
+<% if @essay.sections.any? %>
+  <% @essay.sections.each do |section| %>
+    <p><%= markdown(section.cleaned) unless section.cleaned.blank? %></p>
+  <%end%>
+<%end%>
+
+<h5>Works Cited </h5>
+
+<%= render 'sources/works_cited' %>

@@ -1,9 +1,3 @@
 <% @title = "Works Cited" %>
 
 <h1>Works Cited</h1>
-
-<% if @sources.any? %>
-  <% @sources.each do |source| %>
-    <%=markdown(source.citation)%>
-  <% end %>
-<% end %>

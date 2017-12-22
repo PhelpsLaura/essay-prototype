@@ -1,4 +1,10 @@
 class SectionsController < ApplicationController
+  
+    def index
+      @essay = Essay.find(params[:essay_id])
+      @sections = @essay.sections.all
+    end
+
     def show
       @essay = Essay.find(params[:essay_id])
       @section = @essay.sections.find(params[:id])
@@ -44,6 +50,6 @@ class SectionsController < ApplicationController
 
     private
       def section_params
-        params.require(:section).permit(:title, :content, :outline)
+        params.require(:section).permit(:title, :content, :outline, :cleaned)
       end
 end

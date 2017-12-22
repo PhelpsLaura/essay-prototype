@@ -10,7 +10,9 @@
 
 </br></br>
 <p><%= markdown(@source.citation) %></p>
-<p><%= link_to "More at...", @source.link %></p>
+</br>
+
+<p><%= link_to "More at...", @source.link, :target => "blank" %></p>
 
 </br></br>
 <p><%= link_to "Edit", edit_essay_source_path(@essay, @source), :class => "btn orange lighten-2"%>

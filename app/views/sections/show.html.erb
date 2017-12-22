@@ -8,7 +8,13 @@
 </div>
 
 <div class="sec_content">
+  <h2>Drafting: </h2>
   <%= markdown(@section.content)%>
+</div>
+
+<div class="sec_cleaned">
+  <h2>Cleaned section: </h2>
+  <%= markdown(@section.cleaned)%>
 </div>
 
 <div class="clearfix">

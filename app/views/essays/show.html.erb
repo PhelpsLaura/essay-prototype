@@ -3,12 +3,12 @@
 <h1 class="center"><%= @essay.title %></h1>
 <p class="center">Due: <%= @essay.due_date.strftime("%B %d, %Y") %></p>
 
+<div class="center-align">
+  <%= link_to "View", essay_sections_path(@essay), :class => "waves-effect waves-purple btn-flat modal-trigger center-align" %>
+  <a class="waves-effect waves-purple btn-flat modal-trigger" href="#prompt-modal">Prompt</a>
+</div>
 
 <% unless @essay.prompt.blank? %>
-  <div class="center-align">
-    <a class="waves-effect waves-purple btn-flat modal-trigger" href="#prompt-modal">Prompt</a>
-  </div>
-
   <div id="prompt-modal" class="modal">
     <div class="modal-content">
       <h4>Prompt</h4>
@@ -20,6 +20,8 @@
     </div>
   </div>
 <%end%>
+
+
 
 <% unless @essay.question.blank? %>
 
