@@ -6,10 +6,10 @@
   <div class="collapsible-body">
     <%= markdown(section.outline) %>
     <span class="secondary-content">
-      <%= link_to essay_section_path(@essay, section), :class => "lime-text text-darken-1", :title => "MORE" do %>
+      <%= link_to essay_section_path(@essay, section), :class => "lime-text text-darken-1", :title => "MORE", :target => "_blank" do %>
         <i class="material-icons">flight_takeoff</i>
       <%end%>
-      <%= link_to edit_essay_section_path(@essay, section), :class => "lime-text text-darken-1", :title => "EDIT" do %>
+      <%= link_to edit_essay_section_path(@essay, section), :class => "lime-text text-darken-1", :title => "EDIT", :target => "_blank" do %>
         <i class="material-icons">edit</i>
       <%end%>
       <%= link_to essay_section_path(@essay, section), method: :delete,
