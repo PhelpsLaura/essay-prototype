@@ -4,17 +4,20 @@
 <h2 class="center" style="font-family: Fredericka the Great"><%= @section.title %></h2>
 
 <div class="sec_outline">
-  <p><%= markdown(@section.outline) %></p>
+  <p><%= markdown(@section.outline) unless @section.outline.blank? %></p>
 </div>
 
 <div class="sec_content">
   <h2>Drafting: </h2>
-  <%= markdown(@section.content)%>
+  <%= markdown(@section.content) unless @section.content.blank? %>
 </div>
 
-<div class="sec_cleaned">
-  <h2>Cleaned section: </h2>
-  <%= markdown(@section.cleaned)%>
+<div class="card hoverable sec_cleaned">
+    <h2>Current Working Draft: </h2>
+    <%= markdown(@section.cleaned) unless @section.cleaned.blank?%>
+    </br></br>
+    <%= link_to "EDIT", edit_cleanest_essay_section_path(@essay, @section),
+                        :class => 'btn-flat waves-effect lime-waves waves-lighten' %>
 </div>
 
 <div class="clearfix">

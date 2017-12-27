@@ -1,0 +1,15 @@
+<%= @title = "Editing #{@section.title}" %>
+
+<h2>Editing draft for <%= @essay.title %> : <%= @section.title %> </h2>
+
+<div class="sec_outline">
+  <%= markdown(@section.outline) %>
+</div>
+
+<%= form_for ([@essay, @section]) do |f| %>
+  <p><%= f.label "Draft: " %></p>
+  <p><%= f.text_area :cleaned %></p>
+
+  <%= f.submit :class => "btn waves-effect lime"%>
+
+<%end%>

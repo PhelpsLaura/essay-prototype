@@ -1,5 +1,5 @@
 class SectionsController < ApplicationController
-  
+
     def index
       @essay = Essay.find(params[:essay_id])
       @sections = @essay.sections.all
@@ -26,6 +26,11 @@ class SectionsController < ApplicationController
     end
 
     def edit
+      @essay = Essay.find(params[:essay_id])
+      @section = @essay.sections.find(params[:id])
+    end
+
+    def edit_cleanest
       @essay = Essay.find(params[:essay_id])
       @section = @essay.sections.find(params[:id])
     end
