@@ -1,4 +1,4 @@
-<%= @title = "Editing #{@section.title}" %>
+<% @title = "Editing #{@section.title}" %>
 
 <h2>Editing draft for <%= @essay.title %> : <%= @section.title %> </h2>
 
@@ -10,6 +10,6 @@
   <p><%= f.label "Draft: " %></p>
   <p><%= f.text_area :cleaned %></p>
 
-  <%= f.submit :class => "btn waves-effect lime"%>
+  <%= f.submit "Save", :class => "btn waves-effect lime"%>
 
 <%end%>
